@@ -1,0 +1,22 @@
+<div class="container">
+    <section class="bg-light">
+        <input type="text" class="form-control my-2" placeholder="create title inside fake api"
+        #title (keyup.enter)="createPost(title)">
+    </section>
+    <ul class="list-group my-2">
+        <li class="list-group-item mb-2"
+        *ngFor = "let post of postData; index as i">
+        <span class="badge badge-dark m-2">{{i+1}}</span> {{post.title}}
+<div class="btn-group float-right">
+    <button class="btn btn-warning btn-lg float-right"
+    (click)= "updatePost(post)">Update</button>
+        <button class="btn btn-lg btn-danger float-right "
+        (click) ="removeTitle(post)">
+        Remove</button>
+</div>
+        
+
+        </li>
+    </ul>
+
+ 
